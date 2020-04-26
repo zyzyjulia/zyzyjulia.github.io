@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>自个儿装电脑</title>
+      <link href="/le-zi/build-pc-yourself/"/>
+      <url>/le-zi/build-pc-yourself/</url>
+      
+        <content type="html"><![CDATA[<h2 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h2><p>笔记本用了多年本来考虑是换个笔记本还是PC，倾向是PC但顾虑之后搬家可能会不方便，直到在油管上看到人家自己装机的视频顿时觉得我也可。组装下来确实不难，一个晚上基本可以装好，比拼一个高达简单多了，但耗费心力与时间的是购置配件与等待配件的到来，因为疫情中间还有复活节,隔了近两周才拿到所有东西。。</p><h2 id="配件"><a href="#配件" class="headerlink" title="配件"></a>配件</h2><p>最难的部分，买东西太难了（流下了贫穷的泪水）。</p><ul><li>CPU：Intel or AMD， 恩我最后还是买了intel</li><li>主板：须适配CPU</li><li>RAM：根据需要，大小，DDR?以及频率</li><li>CPU风扇</li><li>硬盘：SSD，HDD</li><li>独显：根据需求</li><li>电源：重要，独显厂家会列出一些建议，CPU+独显供电之外最好还要有写盈余</li><li>机箱：ATX很大了，不喜欢RGB灯效，侧透是好看但得是这个<a href="https://www.youtube.com/watch?v=P1XJXRfU1kc" target="_blank" rel="noopener">效果</a></li><li>外设：显示器，键盘鼠标，音箱等</li><li>无限网卡/蓝牙：可以根据主板厂商的配置购买，intel官网对Linux的支持Firmware看<a href="https://www.intel.de/content/www/de/de/support/articles/000005511/network-and-i-o/wireless-networking.html" target="_blank" rel="noopener">这里</a>,复制到/lib/firmware路径下，但我忘记买了。。此条是事后诸葛，当然还有适配器可以弥补</li></ul><h2 id="组装"><a href="#组装" class="headerlink" title="组装"></a>组装</h2><p>我一个小爱好是阅读产品说明，东西到了最好先查阅下，尤其主板。大致安装可以参照这个<a href="https://www.bilibili.com/video/BV1jE411e7hw?from=search&seid=7087817233737992940" target="_blank" rel="noopener">视频</a>,细致又简洁，遇到问题在油管输入产品及型号，可以找到一些解决方案。</p><p>有静电手环的可以佩戴没有也没关系，准备一把螺丝刀即可（最好带磁，我中间有不小心将螺丝掉到显卡中），过程里最费事的对我来说是把主板安到机箱上，一个人要用力对准主板孔和IO板还要将螺丝旋入很费劲了，最好身边有个朋友帮忙固定（流下了孤独的泪水）。</p><h2 id="OS与软件"><a href="#OS与软件" class="headerlink" title="OS与软件"></a>OS与软件</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 乐子 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PC </tag>
+            
+            <tag> OS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>自个儿整个网页</title>
       <link href="/le-zi/create-own-web/"/>
       <url>/le-zi/create-own-web/</url>
