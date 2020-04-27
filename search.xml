@@ -4,11 +4,24 @@
   
     
     <entry>
+      <title>ROS2安装与初学</title>
+      <link href="/uncategorized/ros2-install-and-lerning/"/>
+      <url>/uncategorized/ros2-install-and-lerning/</url>
+      
+        <content type="html"><![CDATA[<h2 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h2><p>比起ROS1，ROS2不再使用master而采用DSS分布机制，节点间引入Discovery来实现交接，系统鲁棒性更好。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>目前系统是20.04，ROS2对应的支持版本是Foxy，然而要5月23日才发行正式版，deb二进制无法安装，只能通过<a href="https://index.ros.org/doc/ros2/Installation/Foxy/Linux-Development-Setup/" target="_blank" rel="noopener">源码安装</a>(Build from source)，安装过程倒没什么问题，然而之后的实践连官方教程也都是基于安装完Desktop以及面向Eloquent的，我在source完配置文件才发现这点，然后每次打开新终端都会出现提示找不到配置路径，网上提供的恢复环境变量默认值的方法多是：</p><p><del>export PATH=.:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin</del></p><p>以下是方案：</p><pre class=" language-bash"><code class="language-bash">$ vim ~/.bashrc</code></pre><p>由此可进入并看到home下shell的配置文件，找到写入的更改（一般在文末）并删除即可。在这里还可以看到终端的一些个性化配置，喜欢的化可以更改颜色窗口大小等。vim操作如果忘记网上很容易找到。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>自个儿装电脑</title>
       <link href="/le-zi/build-pc-yourself/"/>
       <url>/le-zi/build-pc-yourself/</url>
       
-        <content type="html"><![CDATA[<h2 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h2><p>笔记本用了多年本来考虑是换个笔记本还是PC，倾向是PC但顾虑之后搬家可能会不方便，直到在油管上看到人家自己装机的视频顿时觉得我也可。组装下来确实不难，一个晚上基本可以装好，比拼一个高达简单多了，但耗费心力与时间的是购置配件与等待配件的到来，因为疫情中间还有复活节,隔了近两周才拿到所有东西。。</p><h2 id="配件"><a href="#配件" class="headerlink" title="配件"></a>配件</h2><p>最难的部分，买东西太难了（流下了贫穷的泪水）。</p><ul><li>CPU：Intel or AMD， 恩我最后还是买了intel</li><li>主板：须适配CPU</li><li>RAM：根据需要，大小，DDR?以及频率</li><li>CPU风扇</li><li>硬盘：SSD，HDD</li><li>独显：根据需求</li><li>电源：重要，独显厂家会列出一些建议，CPU+独显供电之外最好还要有写盈余</li><li>机箱：ATX很大了，不喜欢RGB灯效，侧透是好看但得是这个<a href="https://www.youtube.com/watch?v=P1XJXRfU1kc" target="_blank" rel="noopener">效果</a></li><li>外设：显示器，键盘鼠标，音箱等</li><li>无限网卡/蓝牙：可以根据主板厂商的配置购买，intel官网对Linux的支持Firmware看<a href="https://www.intel.de/content/www/de/de/support/articles/000005511/network-and-i-o/wireless-networking.html" target="_blank" rel="noopener">这里</a>,复制到/lib/firmware路径下，但我忘记买了。。此条是事后诸葛，当然还有适配器可以弥补</li></ul><h2 id="组装"><a href="#组装" class="headerlink" title="组装"></a>组装</h2><p>我一个小爱好是阅读产品说明，东西到了最好先查阅下，尤其主板。大致安装可以参照这个<a href="https://www.bilibili.com/video/BV1jE411e7hw?from=search&seid=7087817233737992940" target="_blank" rel="noopener">视频</a>,细致又简洁，遇到问题在油管输入产品及型号，可以找到一些解决方案。</p><p>有静电手环的可以佩戴没有也没关系，准备一把螺丝刀即可（最好带磁，我中间有不小心将螺丝掉到显卡中），过程里最费事的对我来说是把主板安到机箱上，一个人要用力对准主板孔和IO板还要将螺丝旋入很费劲了，最好身边有个朋友帮忙固定（流下了孤独的泪水）。</p><h2 id="OS与软件"><a href="#OS与软件" class="headerlink" title="OS与软件"></a>OS与软件</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h2><p>笔记本用了多年本来考虑是换个笔记本还是PC，倾向是PC但顾虑之后搬家可能会不方便，直到在油管上看到人家自己装机的视频顿时觉得我也可。组装下来确实不难，一个晚上基本可以装好，比拼一个高达简单多了，但耗费心力与时间的是购置配件与等待配件的到来，因为疫情中间还有复活节,隔了近两周才拿到所有东西。。</p><h2 id="配件"><a href="#配件" class="headerlink" title="配件"></a>配件</h2><p>最难的部分，买东西太难了（流下了贫穷的泪水）。</p><ul><li>CPU：Intel or AMD， 恩我最后还是买了intel</li><li>主板：须适配CPU</li><li>RAM：根据需要，大小，DDR?以及频率</li><li>CPU风扇</li><li>硬盘：SSD，HDD</li><li>独显：根据需求</li><li>电源：重要，独显厂家会列出一些建议，CPU+独显供电之外最好还要有些盈余</li><li>机箱：适配主板，ATX很大了，拒绝光污染，侧透是好看但得是这个<a href="https://www.youtube.com/watch?v=P1XJXRfU1kc" target="_blank" rel="noopener">效果</a></li><li>外设：显示器，键盘鼠标，音箱等</li><li>无限网卡/蓝牙：可以根据主板厂商的配置购买，intel官网对Linux的支持Firmware看<a href="https://www.intel.de/content/www/de/de/support/articles/000005511/network-and-i-o/wireless-networking.html" target="_blank" rel="noopener">这里</a>,复制到/lib/firmware路径下，但我忘记买了。。此条是事后诸葛，当然还有适配器可以弥补</li></ul><h2 id="组装"><a href="#组装" class="headerlink" title="组装"></a>组装</h2><p>我一个小爱好是阅读产品说明，东西到了最好先查阅下，尤其主板。大致安装可以参照这个<a href="https://www.bilibili.com/video/BV1jE411e7hw?from=search&seid=7087817233737992940" target="_blank" rel="noopener">视频</a>,细致又简洁，遇到问题在油管输入产品及型号，可以找到一些解决方案。</p><p>有静电手环的可以佩戴没有的话事先洗下手，再准备一把螺丝刀（最好带磁，我中间有不小心将螺丝掉到显卡中），过程里最费事的对我来说是把主板安到机箱上，一个人要用力对准主板孔和IO板还要将螺丝旋入很费劲了，最好身边有个朋友帮忙固定（流下了孤独的泪水）。</p><h2 id="OS与软件"><a href="#OS与软件" class="headerlink" title="OS与软件"></a>OS与软件</h2><h3 id="BIOS设置"><a href="#BIOS设置" class="headerlink" title="BIOS设置"></a>BIOS设置</h3><p>组装完毕打开开机按钮后先进入到BIOS界面，华硕的主板是F2或者Del，EZ模式下可以看到CPU，RAM，显卡，风扇转速等各种信息，F7可以进入更多的设置界面，主板说明上有一些具体介绍，根据需求，比如风扇转速调节，超频，关机时关闭RGB光效，VT-d等功能可以在里面设置，不确定的功能最好保留原设置，UEFI启动。</p><h3 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h3><p>利用USB安装，直接用的之前制作好的装双系统的Ubuntu18.04，过程尝试了使用LVM动态分区。</p><p>系统装好后的有一天，屏幕突然冻住键鼠均无反应。<del>强制关机</del>再打开输入密码停留在紫色开屏界面进不去。。</p><p>一定不要强制关机，系统是OK的，冻屏可能原因在于LVM自动分区不合理我还没有重新分配，更可能的原因是显卡问题，因为无法进入图形界面。</p><p>Ctrl+alt+F1可以进入tty用户登陆界面，Ctrl+alt+F3进入命令行虚拟终端，</p><h3 id="VM-Workstation-Pro"><a href="#VM-Workstation-Pro" class="headerlink" title="VM Workstation Pro"></a>VM Workstation Pro</h3><p>参阅<a href="https://linuxconfig.org/how-to-install-vmware-workstation-on-ubuntu-20-04-focal-fossa-linux" target="_blank" rel="noopener">安装教程</a>。</p><p>激活码非常幸运地第一次尝试就成功了，<a href="https://bingfeng.tw/thread-621454-1-1.html" target="_blank" rel="noopener">感恩作者</a>。</p>]]></content>
       
       
       <categories>

@@ -8,7 +8,7 @@
 
   <!-- Title -->
   
-  <title>杂纂</title>
+  <title>ROS2安装与初学 - 杂纂</title>
 
   <!--Favicon-->
   <link rel="icon" href="favicon/favicon.ico">
@@ -74,42 +74,21 @@
 
 
   		<div class="row">
-  			
-    <div class="col-md-6 col-12 mb-4">
-  <div class="hovereffect">
-    <a href="/uncategorized/ros2-install-and-lerning/">
-      <img class="img-fluid portfolio-img" src="/images/unsplash.jpg" alt="ROS2安装与初学">
-      <div class="overlay">
-        <span class="overlay-text">ROS2安装与初学</span>
-      </div>
-    </a>
-  </div>
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/unsplash.jpg" alt="ROS2安装与初学">
 </div>
-
-
-    <div class="col-md-6 col-12 mb-4">
-  <div class="hovereffect">
-    <a href="/le-zi/build-pc-yourself/">
-      <img class="img-fluid portfolio-img" src="/images/unsplash.jpg" alt="自个儿装电脑">
-      <div class="overlay">
-        <span class="overlay-text">自个儿装电脑</span>
-      </div>
-    </a>
-  </div>
+<div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
+  <h1>ROS2安装与初学</h1>
 </div>
+<div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
+  <h2 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h2><p>比起ROS1，ROS2不再使用master而采用DSS分布机制，节点间引入Discovery来实现交接，系统鲁棒性更好。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>目前系统是20.04，ROS2对应的支持版本是Foxy，然而要5月23日才发行正式版，deb二进制无法安装，只能通过<a href="https://index.ros.org/doc/ros2/Installation/Foxy/Linux-Development-Setup/" target="_blank" rel="noopener">源码安装</a>(Build from source)，安装过程倒没什么问题，然而之后的实践连官方教程也都是基于安装完Desktop以及面向Eloquent的，我在source完配置文件才发现这点，然后每次打开新终端都会出现提示找不到配置路径，网上提供的恢复环境变量默认值的方法多是：</p>
+<p><del>export PATH=.:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin</del></p>
+<p>以下是方案：</p>
+<pre class=" language-bash"><code class="language-bash">$ vim ~/.bashrc</code></pre>
+<p>由此可进入并看到home下shell的配置文件，找到写入的更改（一般在文末）并删除即可。在这里还可以看到终端的一些个性化配置，喜欢的化可以更改颜色窗口大小等。vim操作如果忘记网上很容易找到。</p>
 
-
-    <div class="col-md-6 col-12 mb-4">
-  <div class="hovereffect">
-    <a href="/le-zi/create-own-web/">
-      <img class="img-fluid portfolio-img" src="/images/unsplash.jpg" alt="自个儿整个网页">
-      <div class="overlay">
-        <span class="overlay-text">自个儿整个网页</span>
-      </div>
-    </a>
-  </div>
 </div>
-
 
 
       </div>
